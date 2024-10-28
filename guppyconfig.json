@@ -1,0 +1,74 @@
+{
+  "config_path": "/usr/data/guppyscreen/guppyconfig.json",
+  "default_printer": "k1",
+  "display_brightness": 90,
+  "display_rotate": 3,
+  "display_sleep_sec": 600,
+  "guppy_init_script": "/etc/init.d/S80guppyscreen",
+  "log_path": "/usr/data/printer_data/logs/guppyscreen.log",
+  "printers": {
+    "k1": {
+      "default_macros": {
+        "cooldown": "SET_HEATER_TEMPERATURE HEATER=extruder TARGET=0\nSET_HEATER_TEMPERATURE HEATER=heater_bed TARGET=0",
+        "load_filament": "LOAD_MATERIAL",
+        "unload_filament": "UNLOAD_MATERIAL"
+      },
+      "fans": [
+        {
+          "display_name": "Toolhead",
+          "id": "fan_generic part"
+        },
+        {
+          "display_name": "Auxiliary",
+          "id": "fan_generic auxiliary"
+        },
+        {
+          "display_name": "Chamber",
+          "id": "fan_generic chamber"
+        },
+        {
+          "display_name": "Exhaust",
+          "id": "fan_generic exhaust"
+        }
+      ],
+      "leds": [
+        {
+          "display_name": "Printer Led",
+          "id": "output_pin printer_led"
+        },
+        {
+          "display_name": "Pico Led",
+          "id": "neopixel pico_led"
+        }
+      ],
+      "log_level": "info",
+      "monitored_sensors": [
+        {
+          "color": "red",
+          "controllable": true,
+          "display_name": "Extruder",
+          "id": "extruder"
+        },
+        {
+          "color": "purple",
+          "controllable": true,
+          "display_name": "Bed",
+          "id": "heater_bed"
+        },
+        {
+          "color": "blue",
+          "controllable": true,
+          "display_name": "Chamber",
+          "id": "temperature_fan chamber_fan"
+        }
+      ],
+      "moonraker_api_key": false,
+      "moonraker_host": "127.0.0.1",
+      "moonraker_port": 7125
+    }
+  },
+  "prompt_emergency_stop": true,
+  "thumbnail_path": "/usr/data/printer_data/thumbnails",
+  "touch_calibrated": false,
+  "wpa_supplicant": "/var/run/wpa_supplicant"
+}
